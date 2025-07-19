@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medokanja Power BI</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Hero Header -->
+    <header class="hero-header">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Medokanja <span class="emoji">👨‍⚕️👩‍⚕️</span></h1>
+                <p class="hero-subtitle">Analyzing patient waitlists to optimize healthcare resources and minimize delays.</p>
+            </div></div>
+        <div class="scroll-indicator" onclick="document.querySelector('.main-container').scrollIntoView({behavior: 'smooth'})">
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <!-- Project Overview Section -->
+        <section class="content-section">
+            <div class="glass-card">
+                <div class="section-header">
+                    <h2 class="section-title">📋 Project Overview</h2>
+                </div>
+                <div class="content-grid">
+                    <div class="overview-text"><p>The <strong>Medokanja</strong> project focuses on analyzing <strong>healthcare waiting lists</strong> to enhance <strong>resource management</strong> and improve <strong>patient care</strong> for a public hospital. The name "Medokanja" combines "<strong>Medo</strong>" (medical) and "<strong>Kanja</strong>" (patient in Japanese).</p>
+
+                        <br>
+
+                        <p>This project aims to equip a hospital with <strong>actionable insights</strong> to minimize <strong>waiting times</strong> and enhance <strong>operational efficiency</strong>. By utilizing historical trends (<strong>2018–2021</strong>), the dashboard identifies <strong>bottlenecks</strong>, improves <strong>service delivery</strong>, and highlights <strong>demographic patterns</strong> and <strong>medical specialties</strong> with delays, enabling targeted improvement strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Concepts Section -->
+        <section class="content-section">
+            <div class="glass-card">
+                <h2 class="section-title">🔑 Key Concepts</h2>
+                <div class="concepts-grid">
+                    <div class="top-concepts">
+                        <div class="concept-card">
+                            <h3>🏥 Inpatients</h3>
+                            <p>Individuals requiring hospital admission for complex treatment or extended care.</p>
+                        </div>
+                        <div class="concept-card">
+                            <h3>🚪 Outpatients</h3>
+                            <p>Receive care without overnight hospitalization.</p>
+                        </div>
+                    </div>
+                    <div class="concept-card full-width">
+                        <h3>📊 Statistical Distribution</h3>
+                        <p>The dataset is likely not normally distributed, as the <strong>mean</strong> and <strong>median</strong> differ significantly, suggesting <strong>skewness</strong> and potential <strong>outliers</strong>.</p>
+                        <div class="stats-comparison">
+                            <div class="stat-item">
+                                <strong>Average</strong>
+                                <p>Sensitive to outliers, which can inflate or distort the central tendency.</p>
+                            </div>
+                            <div class="stat-item">
+                                <strong>Median</strong>
+                                <p>Provides a more reliable center for skewed data by focusing on the middle value.</p>
+                            </div>
+                        </div>
+                        <p class="highlight">Including both average and median in the dashboard offers flexibility to meet diverse analytical needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prerequisites & Architecture Section -->
+        <section class="content-section">
+            <div class="glass-card">
+                <h2 class="section-title">📚 Prerequisites & Architecture</h2>
+                <div class="prereq-grid">
+                    <div class="prereq-card">
+                        <h3>🛠️ Technical Requirements</h3>
+                        <p>
+                            <ul>
+                                <li>Power BI Desktop and App</li>
+                                <li>Proficiency in building and publishing Power BI reports</li>
+                                <li>Advanced knowledge of DAX formulas</li>
+                            </ul>
+                        </p>
+                    </div>
+                    <div class="prereq-card">
+                        <h3>📖 Two (2) Report Pages</h3>
+                        <ul>
+                            <li><strong>A Summary Page</strong> for an overall view of the data.</li>
+                            <li><strong>A Detailed Page</strong> for granular analysis and deeper exploration.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section class="content-section dashboard-section">
+            <div class="glass-card">
+                <h2 class="section-title">📱 Interactive Dashboard</h2>
+                <p class="tip">For better visibility, switch to full-screen mode to easily navigate and visualize the dashboard.</p>
+                <div class="dashboard-container">
+                    <iframe
+                        title="Medokanja Dashboard"
+                        src="https://app.powerbi.com/view?r=eyJrIjoiNWJmZjVlMmEtZGJjZC00MjAyLWI0ZjUtNmMwYWRkMWNmNjRkIiwidCI6ImYxNThkZGMxLTExYTUtNDhjOS1iNjUzLWRhMzY5MTNjMGUxNyJ9"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- External Links Section -->
+        <section class="content-section">
+            <div class="glass-card">
+                <h2 class="section-title">🔗 External Links</h2>
+                <p class="links-intro">To explore more about this project:</p>
+                <div class="links-container">
+                    <a href="https://github.com/lisekarimi/medokanja" target="_blank" class="link-card">
+                        <div class="link-icon">👩🏻‍💻</div>
+                        <div class="link-content">
+                            <h3>GitHub Repository</h3>
+                            <p>Visit the complete code</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/lisekarimi/medokanja/tree/main/docs" target="_blank" class="link-card">
+                        <div class="link-icon">📄</div>
+                        <div class="link-content">
+                            <h3>Project Documentation</h3>
+                            <p>Detailed project documentation</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Medokanja Power BI Project Made with <span class="heart">🤍</span></p>
+        </div>
+    </footer>
+</body>
+</html>

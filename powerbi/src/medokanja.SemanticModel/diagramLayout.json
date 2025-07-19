@@ -1,0 +1,113 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 735.38305001469382,
+            "y": 87.149576236935474
+          },
+          "nodeIndex": "Inpatient",
+          "nodeLineageTag": "bddc4d7c-35c3-4a84-ad96-d1d115de99ec",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 316.38305001469371,
+            "y": 87.157020847135925
+          },
+          "nodeIndex": "All_Data",
+          "nodeLineageTag": "f1f26cef-56f1-4165-81b3-dd6d2f0c7f5a",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 575.20156119318517,
+            "y": 586.00171880698122
+          },
+          "nodeIndex": "Mapping_Specialty",
+          "nodeLineageTag": "77e60687-2ca1-410b-a5c2-6593d35c9aec",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 96.142131626735136
+          },
+          "nodeIndex": "Outpatient",
+          "nodeLineageTag": "934825ef-36db-4249-b8ec-7031fe0700fa",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 3.383050014693822,
+            "y": 413.08309213215875
+          },
+          "nodeIndex": "Measures_Table",
+          "nodeLineageTag": "44caa34d-253b-4745-b2f4-f71e5fec61ff",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 26.383050014693708,
+            "y": 567.58681443725914
+          },
+          "nodeIndex": "Calculation Method",
+          "nodeLineageTag": "55d1a58e-98aa-477d-88f9-2e60b91a4c07",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 10.383050014693822,
+            "y": 715.475930030668
+          },
+          "nodeIndex": "filepath",
+          "nodeLineageTag": "a689afd1-e58c-4df2-8968-fa14027cb130",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
