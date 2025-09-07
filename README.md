@@ -20,7 +20,7 @@ The name "Medokanja" combines "Medo" (medical) and "Kanja" (patient in Japanese)
 - `index.html` - Main HTML file for dashboard display in a web page.
 
 ## 📝 Project Documentation
-Refer to the project documentation in the `/docs/` folder to gain a comprehensive and technical understanding of the project.
+Refer to the project documentation in the **Wiki** to gain a comprehensive and technical understanding of the project: [https://github.com/lisekarimi/medokanja/wiki](https://github.com/lisekarimi/medokanja/wiki)
 
 The documentation provides an in-depth analysis of transformations applied to raw data, a comprehensive data dictionary, insights into data distribution patterns, a well-defined design blueprint, and a technical breakdown of each report page, including measures calculated using DAX formulas.
 
