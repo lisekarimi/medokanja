@@ -1,0 +1,5 @@
+* [📊 Data Architecture](archi.md)
+* [⚙️ Data Processing](data-process.md)
+* [🎨 Dashboard Design](design.md)
+* [📐 DAX Formulas](dax.md)
+* [📈 Insights & Analysis](insight.md)

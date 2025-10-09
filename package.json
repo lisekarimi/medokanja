@@ -1,0 +1,15 @@
+{
+  "name": "medokanja",
+  "version": "1.0.0",
+  "description": "Medokanja Power BI Project with Docsify documentation",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "docsify-cli": "^4.4.4",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}

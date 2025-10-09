@@ -1,0 +1,9 @@
+.git
+.gitignore
+.gitattributes
+Makefile
+README.md
+LICENSE
+Dockerfile
+node_modules
+*.log
