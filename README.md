@@ -1,14 +1,14 @@
 # 🩺📈 Medokanja - Patient Waitlist Analysis
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-Power%20BI-blue?style=for-the-badge)](https://app.powerbi.com/view?r=eyJrIjoiNWJmZjVlMmEtZGJjZC00MjAyLWI0ZjUtNmMwYWRkMWNmNjRkIiwidCI6ImYxNThkZGMxLTExYTUtNDhjOS1iNjUzLWRhMzY5MTNjMGUxNyJ9)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-green?style=for-the-badge)](https://lisekarimi.github.io/medokanja/)
+[![MEDOKANJA](https://img.shields.io/badge/MEDOKANJA-Live%20Site-green?style=for-the-badge)](https://medokanja.lisekarimi.com/)
 
 ## 📋 Overview
 Medokanja is a Power BI project designed to improve a hospital's healthcare system by analyzing patient waitlists, identifying bottlenecks, and optimizing resource allocation to enhance patient care.
 
 The name "Medokanja" combines "Medo" (medical) and "Kanja" (patient in Japanese).
 
-[👁️ View the app here](https://lisekarimi.github.io/medokanja/)
+[👁️ View the app here](https://medokanja.lisekarimi.com/)
 
 ## 📂 Project Structure
 - `powerbi` - Contains the core Power BI files.
@@ -20,7 +20,7 @@ The name "Medokanja" combines "Medo" (medical) and "Kanja" (patient in Japanese)
 - `index.html` - Main HTML file for dashboard display in a web page.
 
 ## 📝 Project Documentation
-Refer to the project documentation in the **Wiki** to gain a comprehensive and technical understanding of the project: [https://github.com/lisekarimi/medokanja/wiki](https://github.com/lisekarimi/medokanja/wiki)
+Refer to the project documentation in the **Wiki** to gain a comprehensive and technical understanding of the project: [https://medokanja.lisekarimi.com/docs](https://medokanja.lisekarimi.com/docs)
 
 The documentation provides an in-depth analysis of transformations applied to raw data, a comprehensive data dictionary, insights into data distribution patterns, a well-defined design blueprint, and a technical breakdown of each report page, including measures calculated using DAX formulas.
 
