@@ -7,3 +7,5 @@ LICENSE
 Dockerfile
 node_modules
 *.log
+
+alerts-gcp
