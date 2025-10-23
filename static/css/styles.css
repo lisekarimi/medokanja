@@ -264,15 +264,49 @@ body::before {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .top-concepts .concept-card {
     flex: 1;
+    min-width: 280px;
     max-width: 350px;
 }
 
+/* Force single column on smaller screens */
+@media (max-width: 1200px) {
+    .top-concepts {
+        flex-direction: column !important;
+        align-items: center;
+    }
+
+    .top-concepts .concept-card {
+        width: 100% !important;
+        max-width: 500px !important;
+        flex: none !important;
+    }
+}
+
+/* Mobile-specific fixes for concept cards */
+@media (max-width: 768px) {
+    .top-concepts {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+        align-items: center !important;
+    }
+
+    .top-concepts .concept-card {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+        flex: none !important;
+        display: block !important;
+    }
+}
+
 .concept-card.full-width {
-    grid-column: 1 / -1;
+    width: 100%;
 }
 
 .concept-card h3 {
@@ -513,17 +547,116 @@ body::before {
 }
 
 /* Responsive Design */
+
+/* Large screens and tablets in landscape */
+@media (max-width: 1024px) {
+    .main-container {
+        padding: 0 1.5rem;
+    }
+
+    .hero-content {
+        padding: 3rem 2.5rem;
+        max-width: 800px;
+    }
+
+    .glass-card {
+        padding: 2.5rem;
+    }
+
+    .dashboard-container iframe {
+        height: 65vh;
+        min-height: 500px;
+    }
+
+    .top-concepts {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .top-concepts .concept-card {
+        max-width: none;
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+/* Medium screens and tablets */
+@media (max-width: 900px) {
+    .top-concepts {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .top-concepts .concept-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+/* Tablets and small laptops */
 @media (max-width: 768px) {
+    .hero-header {
+        padding: 1.5rem;
+        min-height: 90vh;
+    }
+
     .hero-content {
         padding: 2.5rem 2rem;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        line-height: 1.5;
     }
 
     .glass-card {
         padding: 2rem;
+        margin: 2rem 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
     }
 
     .concepts-grid {
+        gap: 1.5rem;
+    }
+
+    .top-concepts {
+        flex-direction: column !important;
+        gap: 1.5rem;
+        align-items: center;
+    }
+
+    .top-concepts .concept-card {
+        max-width: none !important;
+        min-width: auto !important;
+        width: 100% !important;
+        flex: none !important;
+    }
+
+    .concept-card.full-width {
+        width: 100%;
+    }
+
+    .stats-comparison {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .prereq-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .table-header,
@@ -535,6 +668,16 @@ body::before {
     .action-cell {
         border-right: none;
         border-bottom: 1px solid var(--primary-ultra-light);
+        padding: 1rem;
+    }
+
+    .header-cell {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .dashboard-container {
+        padding: 1.5rem;
     }
 
     .dashboard-container iframe {
@@ -544,19 +687,31 @@ body::before {
 
     .links-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .link-card {
         flex-direction: column;
         text-align: center;
+        padding: 1.5rem;
     }
 
     .link-icon {
         margin-right: 0;
         margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .link-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        padding: 2rem 1.5rem;
     }
 }
 
+/* Mobile devices */
 @media (max-width: 480px) {
     .main-container {
         padding: 0 1rem;
@@ -564,14 +719,182 @@ body::before {
 
     .hero-header {
         padding: 1rem;
+        min-height: 85vh;
     }
 
     .hero-content {
         padding: 2rem 1.5rem;
     }
 
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
     .glass-card {
         padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .concept-card {
+        padding: 1.5rem;
+    }
+
+    .concept-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .top-concepts {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+    }
+
+    .top-concepts .concept-card {
+        width: 100% !important;
+        max-width: none !important;
+        min-width: auto !important;
+        flex: none !important;
+        display: block !important;
+    }
+
+    .concept-card.full-width {
+        padding: 1.5rem;
+    }
+
+    .prereq-card {
+        padding: 1.5rem;
+    }
+
+    .prereq-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .stat-item {
+        padding: 1rem;
+    }
+
+    .highlight {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .dashboard-container {
+        padding: 1rem;
+    }
+
+    .dashboard-container iframe {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    .link-card {
+        padding: 1.2rem;
+    }
+
+    .link-icon {
+        font-size: 1.8rem;
+    }
+
+    .link-content h3 {
+        font-size: 1rem;
+    }
+
+    .link-content p {
+        font-size: 0.9rem;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+    .hero-content {
+        padding: 1.5rem 1rem;
+    }
+
+    .glass-card {
+        padding: 1.2rem;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .concept-card,
+    .prereq-card {
+        padding: 1.2rem;
+    }
+
+    .top-concepts {
+        gap: 0.8rem;
+    }
+
+    .concept-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .link-card {
+        padding: 1rem;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .glass-card:hover,
+    .concept-card:hover,
+    .prereq-card:hover,
+    .link-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-medium);
+    }
+
+    .glass-card:active,
+    .concept-card:active,
+    .prereq-card:active,
+    .link-card:active {
+        transform: translateY(-2px) scale(0.98);
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-title {
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-header {
+        min-height: 100vh;
+        padding: 1rem;
+    }
+
+    .hero-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .dashboard-container iframe {
+        height: 70vh;
+        min-height: 400px;
     }
 }
 
