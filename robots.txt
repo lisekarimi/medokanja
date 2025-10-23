@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://medokanja.lisekarimi.com/sitemap.xml
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Block access to sensitive directories
+Disallow: /static/js/chatbot.js
+
+# Allow documentation and main content
+Allow: /docs/
+Allow: /static/css/
+Allow: /static/images/
+
+# Crawl delay (optional - helps prevent overloading)
+Crawl-delay: 1

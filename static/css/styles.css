@@ -465,6 +465,104 @@ body::before {
     color: var(--text-dark);
 }
 
+/* Discover More Projects Section */
+.discover-section {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(25px);
+    border: 2px solid var(--primary-light);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-strong);
+}
+
+.discover-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-accent);
+}
+
+.discover-text {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-bottom: 2.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.discover-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    background: var(--gradient-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-medium);
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.portfolio-btn:hover::before {
+    left: 100%;
+}
+
+.portfolio-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: var(--shadow-strong);
+    text-decoration: none;
+    color: white;
+}
+
+.portfolio-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-btn:hover .btn-icon {
+    transform: translateX(5px);
+}
+
 .links-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -531,10 +629,62 @@ body::before {
     margin: 0 auto;
 }
 
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    min-height: 60px;
+}
+
 .footer-content p {
     font-size: 1.1rem;
     color: white;
     margin: 0;
+    flex-shrink: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+.footer-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: white;
+}
+
+.footer-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-link:hover .footer-icon {
+    transform: scale(1.1);
 }
 
 .heart {
@@ -547,6 +697,22 @@ body::before {
 }
 
 /* Responsive Design */
+
+/* Extra large screens */
+@media (min-width: 1400px) {
+    .footer {
+        padding: 4rem 2rem;
+    }
+
+    .footer-content p {
+        font-size: 1.2rem;
+    }
+
+    .footer-link {
+        padding: 0.8rem 1.2rem;
+        font-size: 1rem;
+    }
+}
 
 /* Large screens and tablets in landscape */
 @media (max-width: 1024px) {
@@ -579,6 +745,23 @@ body::before {
         min-width: auto;
         width: 100%;
     }
+
+    .footer {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .footer-main {
+        gap: 1rem;
+    }
+
+    .footer-links {
+        gap: 0.8rem;
+    }
+
+    .footer-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.85rem;
+    }
 }
 
 /* Medium screens and tablets */
@@ -592,6 +775,26 @@ body::before {
     .top-concepts .concept-card {
         width: 100%;
         max-width: 400px;
+    }
+
+    .footer {
+        padding: 2rem 1.5rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .footer-link {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -708,6 +911,24 @@ body::before {
 
     .footer {
         padding: 2rem 1.5rem;
+        margin-top: 4rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .footer-links {
+        gap: 0.8rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-link {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
     }
 }
 
@@ -815,8 +1036,40 @@ body::before {
         font-size: 0.9rem;
     }
 
+    .discover-text {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .portfolio-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 1.5rem 1rem;
+        margin-top: 3rem;
+    }
+
     .footer-content p {
         font-size: 1rem;
+    }
+
+    .footer-main {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-links {
+        gap: 0.6rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-link {
+        padding: 0.5rem 0.8rem;
+        font-size: 0.8rem;
     }
 }
 
@@ -854,6 +1107,38 @@ body::before {
     .link-card {
         padding: 1rem;
     }
+
+    .discover-text {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .portfolio-btn {
+        padding: 0.9rem 1.8rem;
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 1.2rem 0.8rem;
+        margin-top: 2rem;
+    }
+
+    .footer-main {
+        gap: 0.8rem;
+    }
+
+    .footer-links {
+        gap: 0.5rem;
+    }
+
+    .footer-link {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .footer-content p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Touch device optimizations */
@@ -871,6 +1156,16 @@ body::before {
     .prereq-card:active,
     .link-card:active {
         transform: translateY(-2px) scale(0.98);
+    }
+
+    .footer-link:hover {
+        transform: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .footer-link:active {
+        transform: translateY(-1px) scale(0.98);
+        background: rgba(255, 255, 255, 0.25);
     }
 }
 
